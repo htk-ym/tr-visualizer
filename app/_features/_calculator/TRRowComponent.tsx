@@ -57,7 +57,7 @@ export default function TRRowComponent({ itemId }: { itemId: number }) {
                 <circle cx={bar.origin} cy="40" r="15" fillOpacity="0.0" onMouseDown={(e) => vm.action.handleDragBarLeft(index, e.screenX)} style={{ cursor: "col-resize" }} />
                 <circle cx={bar.origin + bar.width} cy="40" r="15" fillOpacity="0.0" onMouseDown={(e) => vm.action.handleDragBarRight(index, e.screenX)} style={{ cursor: "col-resize" }} />
                 <rect x={bar.width < 70 ? bar.origin + bar.width + 5 : bar.origin + (bar.width / 2) - 35} y="30" width="70" height="20" rx="5" ry="5" fill="gray" onMouseDown={(e => vm.action.handleDragBar(index, e.screenX))} style={{ cursor: "ew-resize" }} />
-                <text x={bar.width < 70 ? bar.origin + bar.width + 14 : bar.origin + (bar.width / 2) - 29} y="41" width="50" height="20" textAnchor="center" dominantBaseline="central" fontSize="10" fill="white" alignmentBaseline="middle" className="select-none" onMouseDown={(e => vm.action.handleDragBar(index, e.screenX))} style={{ cursor: "ew-resize" }} >{bar.hhmm}</text>
+                <text x={bar.width < 70 ? bar.origin + bar.width + 14 : bar.origin + (bar.width / 2) - 29} y="41" width="50" height="20" textAnchor="middle" dominantBaseline="central" fontSize="10" fill="white" alignmentBaseline="middle" className="select-none" onMouseDown={(e => vm.action.handleDragBar(index, e.screenX))} style={{ cursor: "ew-resize" }} >{bar.hhmm}</text>
               </g>
             )
           })}
